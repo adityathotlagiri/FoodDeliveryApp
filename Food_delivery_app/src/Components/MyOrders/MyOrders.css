@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --orange: #E95322;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mo-screen {
+  width: 100%;
+  max-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.mo-card {
+  width: 100%;
+  min-height: 100dvh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.mo-header {
+  background: var(--accent);
+  padding: 40px 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mo-back {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.mo-header-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* Body */
+.mo-body {
+  flex: 1;
+  background: #fff;
+  border-radius: 24px 24px 30px 30px;
+  margin-top: -16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  z-index: 4;
+}
+
+/* Tabs */
+.mo-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.mo-tab {
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 1.5px solid #ddd;
+  background: #FFDECF;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: #E95322;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mo-tab.active {
+  background: var(--orange);
+  color: #fff;
+}
+
+/* Empty state */
+.mo-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.mo-empty-icon svg {
+  width: 120px;
+  height: 120px;
+}
+
+.mo-empty-text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--orange);
+  text-align: center;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+/* Orders list */
+.mo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mo-order-card {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.mo-order-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mo-order-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mo-order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mo-order-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  color: #222;
+}
+
+.mo-order-price {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--orange);
+}
+
+.mo-order-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mo-order-date {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #999;
+}
+
+.mo-order-items {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #999;
+}
+
+/* Action buttons */
+.mo-order-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.mo-btn-cancel {
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.mo-btn-track {
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: #FFDECF;
+  color: var(--orange);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}

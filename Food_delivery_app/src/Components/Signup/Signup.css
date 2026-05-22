@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --orange: #E95322;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0 ;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.su-screen {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.su-card {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  position: relative;
+  
+}
+
+/* Header */
+.su-header {
+  background: var(--accent);
+  padding: 40px 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.su-back {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.su-back img {
+  width: 7px;
+  height: 7px;
+}
+
+.su-header-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+/* Body */
+.su-body {
+  flex: 1;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  padding: 24px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -16px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+/* Field group */
+.su-field-group {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.su-label {
+  font-family: var(--font-body);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.su-input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #fdf3c0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #555;
+  outline: none;
+}
+
+.su-input::placeholder {
+  color: #bbb;
+}
+
+.su-input-wrap {
+  position: relative;
+}
+
+.su-input-wrap .su-input {
+  padding-right: 44px;
+}
+/* error input border */
+.su-input-error{
+  border: 1.5px solid #f44 !important;
+  background: #fff0f0 !important;
+}
+.su-input-error{
+  border: 1.5px solid #f44 !important;
+  background: #fff0f0 !important;
+}
+/* Error message */
+.su-error {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #f44;
+  font-weight: 600;
+  padding-left: 12px;
+}
+.su-eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-40%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.su-eye img {
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+}
+
+/* Terms */
+.su-terms {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.su-link {
+  color: var(--orange);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Sign Up button */
+.su-btn-signup {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 50px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(232, 78, 15, 0.30);
+  transition: transform 0.15s;
+}
+
+.su-btn-signup:active {
+  transform: scale(0.97);
+}
+
+/* Or */
+.su-or {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Socials */
+.su-socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.su-social-btn {
+  background: none;
+  border: 2px solid #f0c0a0;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.su-social-btn:active {
+  transform: scale(0.94);
+}
+
+.su-social-btn img {
+  width: 26px;
+  height: 26px;
+}
+
+/* Login link */
+.su-login-text {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #888;
+  padding-bottom: 8px;
+}
+
+.su-login-link {
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+}

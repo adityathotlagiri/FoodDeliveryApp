@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #E95322;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+.pay-screen {
+  width: 100%;
+  max-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #1a1a1a;
+}
+
+.pay-card {
+  width: 100%;
+  max-height: 100dvh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.pay-content {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+/* Header */
+.pay-header {
+  background: var(--accent);
+  padding: 40px 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.pay-back {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.pay-header-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* Body */
+.pay-body {
+  flex: 1;
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  margin-top: -24px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.pay-section { display: flex; flex-direction: column; gap: 10px; }
+
+.pay-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-section-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: #222;
+}
+.pay-section-titleTwo {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+}
+
+.pay-edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pay-edit-tag {
+  background: #fde8d8;
+  border: none;
+  color: var(--orange);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pay-address-box {
+  background: #fdf3c0;
+  border-radius: 50px;
+  padding: 13px 18px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #000;
+}
+
+/* Order row */
+.pay-order-row {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.pay-order-item {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.pay-order-qty {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #E95322;
+  margin-bottom: 4px;
+}
+
+.pay-order-total {
+  position: absolute;
+  font-family: var(--font-display);
+  right: 0;
+  font-size: 25px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Payment method */
+.pay-method-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fdf3c0;
+  border-radius: 16px;
+  padding: 12px 16px;
+}
+
+.pay-method-icon { font-size: 22px; }
+
+.pay-method-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: #222;
+}
+
+.pay-method-number {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #999;
+  margin-left: auto;
+}
+
+/* Delivery */
+.pay-delivery-row {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-delivery-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #555;
+}
+
+.pay-delivery-time {
+  position: absolute;
+  font-family: var(--font-display);
+  right: 0;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--orange);
+}
+
+/* Pay Now button */
+.pay-btn-pay {
+  align-self: center;
+  padding: 4px 28px;
+  border-radius: 50px;
+  background: #fde8d8;
+  color: var(--orange);
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 100s;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+  margin-top: auto;
+}
+
+.pay-btn-pay:active { transform: scale(0.97); }
+
+/* Order confirmed screen */
+.pay-confirmed {
+  height: 100dvh;
+  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 0px 0;
+  position: relative;
+}
+
+.pay-back-confirm {
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.pay-circle-outer {
+  margin-top: 130px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.pay-circle-inner {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.pay-confirmed-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  color: #333;
+  text-align: center;
+}
+
+.pay-confirmed-sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.pay-confirmed-delivery {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #000;
+  text-align: center;
+}
+
+.pay-track-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--orange);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.pay-confirmed-footer {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: auto;
+  padding-bottom: 24px;
+  max-width: 280px;
+}
+.ln-navbar{
+  width: 100%;
+}

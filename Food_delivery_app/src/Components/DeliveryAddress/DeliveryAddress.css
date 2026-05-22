@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #E95322;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+.da-screen {
+  width: 100%;
+  max-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.da-card {
+  width: 100%;
+  height: 100dvh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.da-header {
+  background: var(--accent);
+  padding: 40px 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.da-back {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.da-header-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.da-body {
+  flex: 1;
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  margin-top: -16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.da-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.da-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+.da-item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.da-icon-wrap {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+
+.da-item-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  color: #222;
+  text-align: left;
+}
+
+.da-item-address {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #999;
+  text-align: left;
+  margin-top: 2px;
+}
+
+.da-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.da-radio.active {
+  border-color: var(--orange);
+  box-shadow: inset 0 0 0 3px #fff;
+  background: var(--orange);
+}
+
+.da-divider {
+  height: 1px;
+  background: #f0f0f0;
+}
+
+.da-btn-add {
+  align-self: center;
+  padding: 12px 32px;
+  border-radius: 50px;
+  background: #fde8d8;
+  color: var(--orange);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.da-btn-add:active { transform: scale(0.97); }
