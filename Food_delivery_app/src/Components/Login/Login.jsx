@@ -5,7 +5,7 @@ import "./Login.css";
 // Import your icons from assets
 import eyeOffIcon from "../../assets/icons/Eyeofficon.png";
 import fingerprint from "../../assets/icons/Fingerprint.png";
-import backIcon from "../../assets/icons/backIcon.png";
+import backIcon from "../../assets/icons/BackIcon.png";
 import Navbar from "../Navbar/Navbar";
 
 const Login = () => {
