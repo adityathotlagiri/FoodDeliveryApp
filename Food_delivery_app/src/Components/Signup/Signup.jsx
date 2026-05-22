@@ -8,7 +8,7 @@ import googleIcon from "../../assets/icons/Gmail.png";
 import facebookIcon from "../../assets/icons/Facebook.png";
 import eyeOffIcon from "../../assets/icons/Eyeofficon.png";
 import fingerprintIcon from "../../assets/icons/Fingerprint.png";
-import backIcon from "../../assets/icons/backIcon.png";
+import backIcon from "../../assets/icons/BackIcon.png";
 import Navbar from "../Navbar/Navbar";
 import { useFormik } from "formik";
 
