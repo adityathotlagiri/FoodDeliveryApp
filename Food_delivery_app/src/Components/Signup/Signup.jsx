@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./SignUp.css";
+import "./Signup.css";
 import * as Yup from "yup";
 
 import googleIcon from "../../assets/icons/Gmail.png";
