@@ -6,9 +6,15 @@ import "./OnBoarding.css";
 import pizza from "../../assets/images/pizza.png";
 import icecream from "../../assets/images/Icecream.png";
 import coffee from "../../assets/images/Coffee.png";
+<<<<<<< HEAD
 import orderIcon from "../../assets/icons/Onboarding_icon1.png";
 import paymentIcon from "../../assets/icons/Onboarding_icon2.png";
 import deliveryIcon from "../../assets/icons/Onboarding_icon3.png";
+=======
+import orderIcon from "../../assets/icons/Onboarding_Icon1.png";
+import paymentIcon from "../../assets/icons/Onboarding_Icon2.png";
+import deliveryIcon from "../../assets/icons/Onboarding_Icon3.png";
+>>>>>>> 9af7082cacb64ba0b1bc5341c6793bfee6ffb511
 
 const slides = [
   {
