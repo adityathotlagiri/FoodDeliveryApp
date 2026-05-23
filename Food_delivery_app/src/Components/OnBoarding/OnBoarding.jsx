@@ -4,8 +4,8 @@ import "./OnBoarding.css";
 
 // Import your actual images & icons from assets
 import pizza from "../../assets/images/pizza.png";
-import icecream from "../../assets/images/icecream.png";
-import coffee from "../../assets/images/coffee.png";
+import icecream from "../../assets/images/Icecream.png";
+import coffee from "../../assets/images/Coffee.png";
 import orderIcon from "../../assets/icons/Onboarding_icon1.png";
 import paymentIcon from "../../assets/icons/Onboarding_icon2.png";
 import deliveryIcon from "../../assets/icons/Onboarding_icon3.png";

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./SignUp.css";
+import "./Signup.css";
 import * as Yup from "yup";
 
 import googleIcon from "../../assets/icons/Gmail.png";
 import facebookIcon from "../../assets/icons/Facebook.png";
 import eyeOffIcon from "../../assets/icons/Eyeofficon.png";
 import fingerprintIcon from "../../assets/icons/Fingerprint.png";
-import backIcon from "../../assets/icons/backIcon.png";
+import backIcon from "../../assets/icons/BackIcon.png";
 import Navbar from "../Navbar/Navbar";
 import { useFormik } from "formik";
 
