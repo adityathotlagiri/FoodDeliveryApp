@@ -1,0 +1,259 @@
+.cd-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  z-index: 100;
+}
+
+.cd-peek {
+  flex: 1;
+  background: rgba(242, 84, 41, 0.163);
+  display: flex;
+  align-items: flex-start;
+  margin-right: -100%;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%; 
+}
+
+.cd-drawer {
+  width: 75%;
+  max-width: 100%;
+  height: 100dvh;
+  background: var(--orange, #E95322);
+  border-radius: 80px 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 20px;
+  overflow-y: auto;
+  box-shadow: 1px 1px 2px 2px #000;
+  z-index: 4;
+}
+
+/* Header */
+.cd-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px 16px;
+}
+
+.cd-cart-icon {
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.cd-cart- img {
+    width: 20px;
+    height: 20px;
+}
+.cd-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.cd-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 0 24px;
+}
+
+/* Empty state */
+.cd-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 24px;
+}
+
+.cd-plus-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cd-plus-circle span {
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  margin-top: -4px;
+}
+
+.cd-empty-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+
+/* Item count */
+.cd-count {
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 12px 24px 8px;
+}
+
+/* List */
+.cd-list {
+  padding: 0;
+}
+
+.cd-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  gap: 12px;
+  padding: 12px 24px;
+}
+
+.cd-item-img {
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cd-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 3px;
+}
+
+.cd-item-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.cd-item-price {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Qty controls */
+.cd-qty-wrap {
+  position: absolute;
+  display: flex;
+  bottom: 0px;
+  right: -60px;
+  align-items: flex-end;
+  justify-content: right;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cd-qty-btn {
+  width: 12px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  color: #E95322;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.cd-qty-btn:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.cd-qty {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* Date */
+.cd-item-date {
+  margin-top: 5px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Summary */
+.cd-summary {
+  margin-top: 20px;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cd-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.cd-total {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  padding-top: 4px;
+}
+
+/* Checkout */
+.cd-checkout-wrap {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.cd-btn-checkout {
+  position: absolute;
+  bottom: 80px;
+  padding: 2px 28px;
+  border-radius: 50px;
+  background: #F5C842;
+  color: #E95322;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.cd-btn-checkout:active {
+  transform: scale(0.96);
+}
+

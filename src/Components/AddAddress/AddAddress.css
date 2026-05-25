@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #E95322;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+.aa-screen {
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.aa-card {
+  width: 100%;
+  height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aa-header {
+  background: var(--accent);
+  padding: 40px 24px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.aa-back {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.aa-header-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.aa-body {
+  flex: 1;
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  margin-top: -23px;
+  padding: 32px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.aa-icon-wrap {
+  margin-top: 30px;
+  border-radius: 50%;
+  padding: 30px;
+  background-color: #fff0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.aa-icon-img {
+  width: 50px;
+  height: 50px;
+}
+.aa-field-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aa-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.aa-input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 50px;
+  border: none;
+  background: #fdf3c0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #555;
+  outline: none;
+}
+
+.aa-textarea {
+  width: 100%;
+  height: 90px;
+  padding: 13px 16px;
+  border-radius: 16px;
+  border: none;
+  background: #fdf3c0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #555;
+  outline: none;
+  resize: none;
+}
+
+.aa-input-error {
+  border: 1.5px solid #f44 !important;
+  background: #fff0f0 !important;
+}
+
+.aa-error {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #f44;
+  font-weight: 600;
+  padding-left: 12px;
+}
+
+.aa-btn-apply {
+  padding: 14px 64px;
+  border-radius: 50px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(232,78,15,0.3);
+  transition: transform 0.15s;
+  margin-top: 8px;
+}
+
+.aa-btn-apply:active { transform: scale(0.97); }

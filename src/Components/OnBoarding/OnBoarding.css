@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+  *, *::before, *::after {
+    box-sizing: content-box ;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+  --orange: #E84E0F;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ob-wrapper {
+  /* width: 111.7%; */
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ob-slider {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+}
+
+.ob-track {
+  display: flex;
+  height: 100dvh;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ob-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image takes 50% — reduced from 55% */
+.ob-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  flex-shrink: 0;
+}
+
+.ob-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ob-skip {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  color: #E84E0F;
+  background-color: transparent;
+  font-family: var(--font-body);
+  font-size: 23px;
+  font-weight: 600;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Card takes remaining 50% */
+.ob-card {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 46px 28px 24px;
+  text-align: center;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.ob-icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ob-title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ob-desc {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: #777;
+  line-height: 1.4;
+  max-width: 280px;
+  flex-shrink: 0;
+}
+
+.ob-dots {
+  display: flex;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.ob-dot {
+  width: 22px;
+  height: 5px;
+  border-radius: 3px;
+  background: #ddd;
+  transition: background 0.3s, width 0.3s;
+}
+
+.ob-dot.active {
+  background: var(--orange);
+  width: 32px;
+}
+
+.ob-btn {
+  margin-top: 10px;
+  padding: 12px 48px;
+  border-radius: 50px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.15s;
+  box-shadow: 0 4px 16px rgba(232, 78, 15, 0.35);
+  flex-shrink: 0;
+}
+
+.ob-btn:active {
+  transform: scale(0.96);
+}

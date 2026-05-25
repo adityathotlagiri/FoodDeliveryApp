@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+    .FirstPage{
+        display: flex;
+        flex-direction: column;
+        background-color: #E95322;
+        margin: 0;
+        width: 100%;
+        gap: 30px;
+        min-height : 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .FirstPage_img{
+        width: 202px;
+        height: 178.95px;
+    }
+    .FirstPage_Title{
+        font-family: "Poppins",sans-serif;
+        text-align: center;
+        font-size: 34.85px;
+    }
+    .FirstPage_desc{
+        text-align: center;
+        color: #F8F8F8;
+        width: 295px;
+        font-size: 14px;
+        font-family: "League Spartan",sans-serif;
+    }
+    .FirstPage_login{
+        border-radius: 30px;
+        background-color: #F5CB58;
+        width: 207px;
+        height: 45px;
+        font-family: 'League Spartan',sans-serif;
+        font-size: 24px;
+        color: #E95322;
+    }
+    .FirstPage_signup{
+        margin-top: -20px;
+        border-radius: 30px;
+        background-color: #F3E9B5;
+        width: 207px;
+        height: 45px;
+        font-family: 'League Spartan',sans-serif;
+        font-size: 24px;
+        color: #E95322;
+        
+    }
+}

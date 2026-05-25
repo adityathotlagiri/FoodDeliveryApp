@@ -1,0 +1,130 @@
+.pd-overlay {
+  position: fixed;
+  width: 100%;
+  max-height: 100dvh;
+  display: flex;
+  z-index: 100;
+}
+
+/* Left peeking area — shows previous page */
+.pd-peek {
+  flex: 1;
+  background: rgba(242, 84, 41, 0.163);
+  display: flex;
+  align-items: flex-start;
+  margin-right: -100%;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%; 
+}
+
+/* Drawer — slides in from right */
+.pd-drawer {
+  width: 75%;
+  max-width: 100%;
+  height: 100dvh;
+  background: var(--orange, #E95322);
+  border-radius: 80px 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 20px;
+  overflow-y: auto;
+  box-shadow: 1px 1px 2px 2px #000;
+  z-index: 4;
+}
+
+
+/* User info */
+.pd-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 28px 28px;
+}
+
+.pd-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.pd-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.pd-email {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 2px;
+}
+
+/* Menu */
+.pd-menu {
+  flex: 1;
+  padding: 0 28px;
+}
+
+.pd-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 14px 0;
+  text-align: left;
+}
+
+.pd-menu-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.pd-menu-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pd-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Bottom home button */
+.pd-bottom {
+  padding: 16px 28px 0;
+}
+
+.pd-home-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pd-home-btn img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
