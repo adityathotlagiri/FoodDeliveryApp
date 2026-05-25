@@ -164,7 +164,7 @@ body {
 
 .hm-cat-icon-wrap {
   width: 100%;
-  min-width: 60px;
+  min-width: 50px;
   height: 76px;
   background: #fdf3c0;
   border-radius: 16px;
@@ -265,6 +265,7 @@ body {
 
 .hm-promo-text {
   flex: 1;
+  flex-shrink: 1;
   z-index: 1;
 }
 
@@ -274,6 +275,7 @@ body {
   color: rgba(255,255,255,0.85);
   line-height: 1.5;
   max-width: 140px;
+  
 }
 
 .hm-promo-discount {
@@ -285,11 +287,11 @@ body {
 }
 
 .hm-promo-img {
-  width: 200px;
+  width: 120px;
   height: 110px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 14px;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 /* Recommend */
