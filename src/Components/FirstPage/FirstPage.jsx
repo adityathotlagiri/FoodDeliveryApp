@@ -1,7 +1,7 @@
 import "./FirstPage.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/league-spartan/500.css"; 
-import yumquick from '../../assets/icons/Icon_yumquick.png'
+import yumquick from '../../assets/icons/Icon_yumquick.png';
 import { useNavigate } from "react-router-dom";
 const FirstPage = () => {
   const navigate = useNavigate();
