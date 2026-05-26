@@ -17,6 +17,7 @@ import AddAddress from './Components/AddAddress/AddAddress'
 import ConfirmOrder from './Components/ConfirmOrder/ConfirmOrder'
 import Payment from './Components/Payment/Payment'
 import TrackOrder from './Components/TrackOrder/TrackOrder'
+import Filter from './Components/Filter/Filter'
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -64,6 +65,9 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/TrackOrder" element={
           <PageTransition><TrackOrder /></PageTransition>
+        } />
+        <Route path="/Filter" element={
+          <PageTransition><Filter /></PageTransition>
         } />
       </Routes>
     </AnimatePresence>

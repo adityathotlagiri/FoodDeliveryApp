@@ -22,6 +22,7 @@ import Navbar from "../Navbar/Navbar";
 import { useState } from "react";
 import NotificationsDrawer from "../NotificationsDrawer/NotificationsDrawer";
 import CartDrawer from "../CartDrawer/CartDrawer";
+import { useNavigate } from "react-router-dom";
 
 const categories = [
   { icon: snackIcon, label: "Snacks" },
@@ -47,7 +48,7 @@ const Home = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [nDrawerOpen, setnDrawerOpen] = useState(false);
   const [CartDrawerOpen, setCartDrawerOpen] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <div className="hm-screen">
       <ProfileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)}/>
@@ -61,7 +62,7 @@ const Home = () => {
           <div className="hm-search-row">
             <div className="hm-search-box">
               <input className="hm-search-input" type="text" placeholder="Search" />
-              <button className="hm-filter-btn">
+              <button className="hm-filter-btn" onClick={() => navigate("/filter")}>
                 <img src={filterIcon} alt="filter" />
               </button>
             </div>

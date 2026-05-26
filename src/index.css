@@ -65,6 +65,15 @@ button:focus-visible {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;        /* removes focus border globally */
+  -webkit-tap-highlight-color: transparent;  /* removes tap highlight on mobile */
+}
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: none;
 }
 html {
   width: 100%;
