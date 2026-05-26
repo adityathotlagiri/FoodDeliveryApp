@@ -104,7 +104,7 @@
 .cd-count {
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
   padding: 12px 24px 8px;
@@ -141,7 +141,7 @@
 
 .cd-item-name {
   font-family: 'Nunito', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
   color: #fff;
 }
@@ -156,8 +156,8 @@
 .cd-qty-wrap {
   position: absolute;
   display: flex;
-  bottom: 0px;
-  right: -60px;
+  bottom: -10px;
+  right: -65px;
   align-items: flex-end;
   justify-content: right;
   gap: 8px;
@@ -239,7 +239,7 @@
 }
 
 .cd-btn-checkout {
-  position: absolute;
+  margin-top: 20px;
   bottom: 80px;
   padding: 2px 28px;
   border-radius: 50px;
