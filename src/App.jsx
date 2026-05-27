@@ -18,6 +18,10 @@ import ConfirmOrder from './Components/ConfirmOrder/ConfirmOrder'
 import Payment from './Components/Payment/Payment'
 import TrackOrder from './Components/TrackOrder/TrackOrder'
 import Filter from './Components/Filter/Filter'
+import FoodList from './Components/FoodList/FoodList'
+import FoodDetail from './Components/FoodDetail/FoodDetail'
+import BestSeller from './Components/BestSeller/BestSeller'
+import Recommendations from './Components/Recommendations/Recommendations'
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -68,6 +72,18 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/Filter" element={
           <PageTransition><Filter /></PageTransition>
+        } />
+        <Route path="/food-list/:category" element={
+          <PageTransition><FoodList /></PageTransition>
+        } />
+        <Route path="/food/:id" element={
+          <PageTransition><FoodDetail /></PageTransition>
+        } />
+        <Route path="/bestSeller" element={
+          <PageTransition><BestSeller /></PageTransition>
+        } />
+        <Route path="/recommendations" element={
+          <PageTransition><Recommendations /></PageTransition>
         } />
       </Routes>
     </AnimatePresence>

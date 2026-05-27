@@ -33,10 +33,10 @@ const categories = [
 ];
 
 const bestSellers = [
-  { img: sushi, price: "$103.0" },
-  { img: pasta, price: "$50.0" },
-  { img: lasagna, price: "$12.99" },
-  { img: cupcake, price: "$8.20" },
+  { img: sushi, price: "$103.0" ,name:"Sushi" ,rating:"4.0"},
+  { img: pasta, price: "$50.0" ,name:"Pasta",rating:"4.0"},
+  { img: lasagna, price: "$12.99" ,name:"Lasagna",rating:"4.0"},
+  { img: cupcake, price: "$8.20" ,name:"Cupcake",rating:"4.0"},
 ];
 
 const recommended = [
@@ -61,7 +61,7 @@ const Home = () => {
           {/* Search bar */}
           <div className="hm-search-row">
             <div className="hm-search-box">
-              <input className="hm-search-input" type="text" placeholder="Search" />
+              <input className="hm-search-input" type="text" placeholder="Search" name="search" />
               <button className="hm-filter-btn" onClick={() => navigate("/filter")}>
                 <img src={filterIcon} alt="filter" />
               </button>
@@ -87,7 +87,7 @@ const Home = () => {
           {/* Categories */}
           <div className="hm-categories">
             {categories.map((cat, i) => (
-              <div className="hm-cat-item" key={i}>
+              <div className="hm-cat-item" key={i} onClick={() => navigate(`/food-list/${cat.label}`)}>
                 <div className="hm-cat-icon-wrap">
                   <img src={cat.icon} alt={cat.label} />
                 </div>
@@ -99,12 +99,26 @@ const Home = () => {
           {/* Best Seller */}
           <div className="hm-section-header">
             <h3 className="hm-section-title">Best Seller</h3>
-            <button className="hm-view-all">View All &rsaquo;</button>
+            <button className="hm-view-all" onClick={()=>navigate("/bestSeller")}>View All &rsaquo;</button>
           </div>
 
           <div className="hm-best-seller-list">
             {bestSellers.map((item, i) => (
-              <div className="hm-bs-item" key={i}>
+              <div className="hm-bs-item" key={i} onClick={() => navigate(`/food/${item.id}`, { state: { item: {
+                  id: item.id,
+                  name: item.name,
+                  image: item.img,
+                  price: parseFloat(item.price.replace("$", "")),
+                  rating: item.rating,
+                  desc: item.desc,
+                  fullDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+                  addons: [
+                    { name: "Extra Sauce", price: 1.99 },
+                    { name: "Cheese", price: 2.99 },
+                    { name: "Bacon", price: 3.99 },
+                    { name: "Avocado", price: 2.49 },
+                  ],
+                }}})}>
                 <img src={item.img} alt="food" className="hm-bs-img" />
                 <span className="hm-bs-price">{item.price}</span>
               </div>
@@ -112,7 +126,28 @@ const Home = () => {
           </div>
 
           {/* Promo banner */}
-          <div className="hm-promo">
+          <div
+            className="hm-promo"
+            onClick={() => navigate("/food/promo", { state: { item: {
+              id: "promo",
+              name: "Pizza with Pepperoni and Cheese",
+              image: pizza,
+              price: 14.00,
+              originalPrice: 20.00,
+              discount: 30,
+              rating: "5.0",
+              desc: "Lorem ipsum dolor sit amet",
+              fullDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+              addonsTitle: "Personal portion",
+              addons: [
+                { name: "Personal (4 Slides)", price: 0.00 },
+                { name: "Medium (8 Slides)", price: 3.00 },
+                { name: "Familiar (10 Slides)", price: 6.00 },
+                { name: "Jumbo (12 Slides)", price: 10.00 },
+              ],
+            }}})}
+            style={{ cursor: "pointer" }}
+          >
             <div className="hm-promo-text">
               <p className="hm-promo-sub">Experience our delicious new dish</p>
               <h3 className="hm-promo-discount">30% OFF</h3>
@@ -123,6 +158,9 @@ const Home = () => {
           {/* Recommend */}
           <div className="hm-section-header">
             <h3 className="hm-section-title">Recommend</h3>
+            <button className="hm-view-all" onClick={() => navigate("/recommendations")}>
+              View All &rsaquo;
+            </button>
           </div>
 
           <div className="hm-recommend-list">

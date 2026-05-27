@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #E95322;
+  --accent: #F5C842;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+.fd-screen {
+  width: 100%;
+  max-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #1a1a1a;
+}
+
+.fd-card {
+  width: 100%;
+  height: 100dvh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.fd-header {
+  background: var(--accent);
+  padding: 50px 20px 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.fd-back {
+    position:absolute;
+  background: none;
+  left:10px;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.fd-header-center {
+    position:absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left:60px;
+  top:40px;
+  gap: 4px;
+}
+
+.fd-header-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 900;
+  color: #000;
+  text-align: left;
+}
+
+.fd-rating-badge {
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 5px;
+  border-radius: 20px;
+}
+
+.fd-fav-btn {
+    position:absolute;
+    right:20px;
+    top:40px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3px;
+  height: 16px;
+  font-size: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.fd-fav-btn.active{
+    background-color:#E95322 ;
+}
+
+/* Body */
+.fd-body {
+  flex: 1;
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  margin-top: -24px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow:auto;
+  z-index: 2;
+}
+/* Price wrap for promo */
+.fd-price-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fd-original-price {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: #F5C842  ;
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+/* Discount badge */
+.fd-discount-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 12px;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(232,78,15,0.4);
+  clip-path: polygon(
+    50% 0%, 61% 12%, 77% 6%, 79% 23%, 94% 23%, 89% 39%, 100% 50%, 89% 61%, 
+    94% 77%, 79% 79%, 77% 94%, 61% 89%, 50% 100%, 39% 89%, 23% 94%, 21% 79%, 
+    6% 77%, 11% 61%, 0% 50%, 11% 39%, 6% 23%, 21% 23%, 23% 6%, 39% 12%
+  );
+}
+
+.fd-image-card {
+  position: relative;
+  width:100%;
+}
+
+.fd-image {
+  width: 100%;
+  height: 220px;
+    border-radius: 40px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Price row */
+.fd-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fd-price {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--orange);
+}
+.fd-divider {
+  height: 1px;
+  background: #FFD8C7 ;
+  margin-top : -10px;
+  margin-bottom: 4px;
+}
+
+.fd-qty-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fd-qty-btn {
+  width: 25px;
+  height: 28px;
+  border-radius: 100%;
+  border: none;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s;
+}
+
+.fd-qty-btn.minus {
+  background: #E95322;
+  color: #fff;
+}
+
+.fd-qty-btn.plus {
+  background: var(--orange);
+  color: #fff;
+}
+
+.fd-qty-btn:active { transform: scale(0.9); }
+
+.fd-qty {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 900;
+  color: #222;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Description */
+.fd-desc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fd-item-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 900;
+  color: #222;
+}
+
+.fd-item-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #999;
+  line-height: 1.6;
+}
+
+/* Addons */
+.fd-addons-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fd-addons-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 900;
+  color: #222;
+}
+
+.fd-addons-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.fd-addon-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.fd-addon-name {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #555;
+  font-weight: 600;
+}
+
+.fd-addon-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fd-addon-price {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #999;
+}
+
+/* Radio button */
+.fd-radio {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;   
+  margin: 0;
+  box-sizing: border-box;
+  width: 20px;         
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--orange);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;   
+}
+
+.fd-radio.selected {
+  border-color: var(--orange);
+  background: var(--orange);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.fd-addon-divider {
+  height: 1px;
+  background: #f0f0f0;
+}
+
+/* Add to cart */
+.fd-btn-cart {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+  width: 100%;
+  padding: 12px 0px 10px 0px;
+  border-radius: 50px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  border: none;
+  box-shadow: 0 4px 16px rgba(232,78,15,0.3);
+  transition: transform 0.15s;
+  gap:3px;
+}
+.fd-btn-cart img {
+    width:18px;
+    height:20px;
+    object-fit: contain;
+
+}
+.fd-btn-cart:active { transform: scale(0.97); }
