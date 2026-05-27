@@ -40,8 +40,8 @@ const bestSellers = [
 ];
 
 const recommended = [
-  { img: burger, price: "$10.0", rating: "5.0" },
-  { img: rolls, price: "$25.0", rating: "5.0" },
+  { img: burger, price: "$10.0", rating: "5.0" ,name:"Burger"},
+  { img: rolls, price: "$25.0", rating: "5.0" ,name:"Rolls"},
 ];
 
 const Home = () => {
@@ -165,7 +165,22 @@ const Home = () => {
 
           <div className="hm-recommend-list">
             {recommended.map((item, i) => (
-              <div className="hm-rec-item" key={i}>
+              <div className="hm-rec-item" key={i} 
+              onClick={() => navigate(`/food/${item.id}`, { state: { item: {
+                  id: item.id,
+                  name: item.name,
+                  image: item.img,
+                  price: parseFloat(item.price.replace("$", "")),
+                  rating: item.rating,
+                  desc: item.desc,
+                  fullDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+                  addons: [
+                    { name: "Extra Sauce", price: 1.99 },
+                    { name: "Cheese", price: 2.99 },
+                    { name: "Bacon", price: 3.99 },
+                    { name: "Avocado", price: 2.49 },
+                  ],
+                }}})}>
                 <img src={item.img} alt="food" className="hm-rec-img" />
                 <div className="hm-rec-info">
                   <span className="hm-rec-rating">⭐ {item.rating}</span>
