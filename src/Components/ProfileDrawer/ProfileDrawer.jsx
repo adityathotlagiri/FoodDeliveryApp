@@ -3,16 +3,23 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./ProfileDrawer.css";
 import profilePic from "../../assets/icons/HomeIcons/profile_icon.png";
-
+import bag from "../../assets/icons/profiledraw/bag.png";
+import card from "../../assets/icons/profiledraw/card.png";
+import help from "../../assets/icons/profiledraw/help.png";
+import location from "../../assets/icons/profiledraw/location.png";
+import logout from "../../assets/icons/profiledraw/logout.png";
+import phone from "../../assets/icons/profiledraw/phone.png";
+import user from "../../assets/icons/profiledraw/user.png";
+import settings from "../../assets/icons/profiledraw/settings.png";
 const menuItems = [
-  { icon: "🛍️", label: "My Orders", path: "/orders" },
-  { icon: "👤", label: "My Profile", path: "/myProfile" },
-  { icon: "📍", label: "Delivery Address", path: "/address" },
-  { icon: "💳", label: "Payment Methods", path: "/payment" },
-  { icon: "📞", label: "Contact Us", path: "/contact" },
-  { icon: "💬", label: "Help & FAQs", path: "/help" },
-  { icon: "⚙️", label: "Settings", path: "/settings" },
-  { icon: "🚪", label: "Log Out", path: "/" },
+  { icon: bag, label: "My Orders", path: "/orders" },
+  { icon: user, label: "My Profile", path: "/myProfile" },
+  { icon: location, label: "Delivery Address", path: "/address" },
+  { icon: card, label: "Payment Methods", path: "/paymentMethods" },
+  { icon: phone, label: "Contact Us", path: "/ContactUs/Contact" },
+  { icon: help, label: "Help & FAQs", path: "/ContactUs/FAQ" },
+  { icon: settings, label: "Settings", path: "/Settings" },
+  { icon: logout, label: "Log Out", path: "/" },
 ];
 
 const ProfileDrawer = ({ isOpen, onClose }) => {
@@ -63,7 +70,7 @@ const ProfileDrawer = ({ isOpen, onClose }) => {
                     className="pd-menu-item"
                     onClick={() => handleNav(item.path)}
                   >
-                    <span className="pd-menu-icon">{item.icon}</span>
+                    <span className="pd-menu-icon"><img src={item.icon} alt="icons" /></span>
                     <span className="pd-menu-label">{item.label}</span>
                   </button>
                   {i < menuItems.length - 1 && <div className="pd-divider" />}

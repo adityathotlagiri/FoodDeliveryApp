@@ -22,6 +22,11 @@ import FoodList from './Components/FoodList/FoodList'
 import FoodDetail from './Components/FoodDetail/FoodDetail'
 import BestSeller from './Components/BestSeller/BestSeller'
 import Recommendations from './Components/Recommendations/Recommendations'
+import PaymentMethod from './Components/PaymentMethod/PaymentMethod'
+import AddCard from './Components/AddCard/AddCard'
+import ContactUs from './Components/ContactUs/ContactUs'
+import Settings from './Components/Settings/Settings'
+import PasswordSetting from './Components/PasswordSetting/PasswordSetting'
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -84,6 +89,22 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/recommendations" element={
           <PageTransition><Recommendations /></PageTransition>
+        } />
+        <Route path="/paymentMethods" element={
+          <PageTransition><PaymentMethod /></PageTransition>
+        } />
+        <Route path="/AddCard" element={
+          <PageTransition><AddCard /></PageTransition>
+        } />
+        <Route path="/ContactUs/:page" element={
+          <PageTransition><ContactUs /></PageTransition>
+        } />
+        
+        <Route path="/Settings" element={
+          <PageTransition><Settings /></PageTransition>
+        } />
+        <Route path="/PasswordSettings" element={
+          <PageTransition><PasswordSetting /></PageTransition>
         } />
       </Routes>
     </AnimatePresence>

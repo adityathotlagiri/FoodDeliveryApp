@@ -63,7 +63,7 @@ const Home = () => {
             <div className="hm-search-box">
               <input className="hm-search-input" type="text" placeholder="Search" name="search" />
               <button className="hm-filter-btn" onClick={() => navigate("/filter")}>
-                <img src={filterIcon} alt="filter" />
+                <img src={filterIcon} loading="lazy" alt="filter" />
               </button>
             </div>
             
@@ -89,7 +89,7 @@ const Home = () => {
             {categories.map((cat, i) => (
               <div className="hm-cat-item" key={i} onClick={() => navigate(`/food-list/${cat.label}`)}>
                 <div className="hm-cat-icon-wrap">
-                  <img src={cat.icon} alt={cat.label} />
+                  <img src={cat.icon} loading="lazy"  alt={cat.label} />
                 </div>
                 <span className="hm-cat-label">{cat.label}</span>
               </div>

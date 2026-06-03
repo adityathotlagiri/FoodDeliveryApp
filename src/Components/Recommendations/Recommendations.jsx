@@ -120,7 +120,7 @@ const Recommendations = () => {
                   <span className="rec-qty">1</span>
                   <button className="rec-qty-btn plus">+</button>
                 </div>
-                <button className="rec-cart-btn"><img src={cartIcon} alt="cart"/></button>
+                <button className="rec-cart-btn"><img src={cartIcon} alt="cart"/>   </button>
               </div>
             </div>
           </div>
