@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import card from "../../assets/icons/PaymentMethods/cardIcon.png";
 import apple from "../../assets/icons/PaymentMethods/appleIcon.png";
 import paypal from "../../assets/icons/PaymentMethods/paypalIcon.png";
-import googleplay from "../../assets/icons/PaymentMethods/googleplayIcon.png";
+import googleplay from "../../assets/icons/PaymentMethods/GoogleplayIcon.png";
 import { useState } from "react";
 
 const initialPaymentMethods = [
