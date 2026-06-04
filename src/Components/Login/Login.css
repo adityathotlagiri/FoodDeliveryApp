@@ -257,3 +257,21 @@ body {
   height: 24px;
   filter: brightness(0) invert(1);
 }
+
+/* Error input */
+.ln-input-error {
+  border: 1.5px solid #f44 !important;
+  background: #fff0f0 !important;
+}
+
+
+
+/* Error message */
+.ln-error {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: #f44;
+  font-weight: 600;
+  padding-left: 12px;
+  margin-top: 2px;
+}

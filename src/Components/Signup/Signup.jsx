@@ -11,6 +11,7 @@ import fingerprintIcon from "../../assets/icons/Fingerprint.png";
 import backIcon from "../../assets/icons/BackIcon.png";
 import Navbar from "../Navbar/Navbar";
 import { useFormik } from "formik";
+import toast, { Toaster } from "react-hot-toast";
 
 const validationSchema = Yup.object({
   fullName: Yup.string()
@@ -52,12 +53,29 @@ const SignUp = () => {
     validationSchema,
     onSubmit: (values) => {
       console.log("Sign up values:", values);
-      alert("Profile updated successfully!");
+      toast.success("Account created successfully!", {
+        duration: 2000,
+        position: "top-center",
+        style: {
+          background: "#E95322",
+          color: "#fff",
+          fontFamily: "Nunito, sans-serif",
+          fontWeight: "700",
+          borderRadius: "50px",
+          padding: "12px 24px",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#E95322",
+        },
+      });
+      setTimeout(() => navigate("/home"), 2000);
     },
   });
 
   return (
     <div className="su-screen">
+      <Toaster />
       <div className="su-card">
 
         {/* Header */}
