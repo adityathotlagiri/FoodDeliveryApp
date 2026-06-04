@@ -14,16 +14,16 @@ const Navbar = () => {
                      <button className="ln-nav-item" onClick={() => navigate("/home")}>
                        <img src={homeIcon} alt="Home" />
                      </button>
-                     <button className="ln-nav-item">
+                     <button className="ln-nav-item" onClick={() => navigate("/home")}>
                        <img src={menuIcon} alt="Menu" />
                      </button>
-                     <button className="ln-nav-item">
+                     <button className="ln-nav-item"onClick={() => navigate("/Favorites")}>
                        <img src={heartIcon} alt="Favourites" />
                      </button>
-                     <button className="ln-nav-item">
+                     <button className="ln-nav-item" onClick={() => navigate("/confirmOrder")}>
                        <img src={orderIcon} alt="Orders" />
                      </button>
-                     <button className="ln-nav-item">
+                     <button className="ln-nav-item"  onClick={() => navigate("/Help")}> 
                        <img src={supportIcon} alt="Support" />
                      </button>
                    </div>

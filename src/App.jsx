@@ -27,6 +27,9 @@ import AddCard from './Components/AddCard/AddCard'
 import ContactUs from './Components/ContactUs/ContactUs'
 import Settings from './Components/Settings/Settings'
 import PasswordSetting from './Components/PasswordSetting/PasswordSetting'
+import Favorites from './Components/Favorites/Favorites'
+import Help from './Components/Help/Help'
+import Support from './Components/Support/Support'
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -105,6 +108,15 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/PasswordSettings" element={
           <PageTransition><PasswordSetting /></PageTransition>
+        } />
+        <Route path="/Favorites" element={
+          <PageTransition><Favorites /></PageTransition>
+        } />
+        <Route path="/Help" element={
+          <PageTransition><Help /></PageTransition>
+        } />
+        <Route path="/Support" element={
+          <PageTransition><Support /></PageTransition>
         } />
       </Routes>
     </AnimatePresence>
