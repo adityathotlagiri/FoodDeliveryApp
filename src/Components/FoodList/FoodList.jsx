@@ -30,7 +30,7 @@ const categories = [
 
 const FoodList = () => {
   const { category } = useParams();
-  const [activeCategory, setActiveCategory] = useState(category || "Snacks");
+  const [activeCategory, setActiveCategory] = useState(category);
   const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [nDrawerOpen, setnDrawerOpen] = useState(false);

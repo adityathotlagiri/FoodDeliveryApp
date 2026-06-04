@@ -14,7 +14,7 @@ const Navbar = () => {
                      <button className="ln-nav-item" onClick={() => navigate("/home")}>
                        <img src={homeIcon} alt="Home" />
                      </button>
-                     <button className="ln-nav-item" onClick={() => navigate("/home")}>
+                     <button className="ln-nav-item" onClick={() => navigate("/food-list/Snacks")}>
                        <img src={menuIcon} alt="Menu" />
                      </button>
                      <button className="ln-nav-item"onClick={() => navigate("/Favorites")}>
